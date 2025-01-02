@@ -14,7 +14,7 @@ class Main implements MainInterface {
   allControls: Record<ControlScheme, PlayerControls>
   currentControls?: PlayerControls
 
-  wormholeSpace = new WormholeSpace(1.5, 5)
+  wormholeSpace = new WormholeSpace(1.5, 0.5)
   player: Player
   renderer: Renderer
   ui: UiManager
