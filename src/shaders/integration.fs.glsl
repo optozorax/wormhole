@@ -72,7 +72,7 @@ void normalizeDirection2D(vec2 position, inout vec2 direction) {
 
 // Integrate in 2D wormhole space.
 void integrate2D(inout vec2 position, inout vec2 direction, inout float throatTravelDistance) {
-  for (int i = 0; i < 200; i++) {
+  for (int i = 0; i < 2000; i++) {
     step2D(position, direction, throatTravelDistance);
     // normalizeDirection2D(ray);
   }
