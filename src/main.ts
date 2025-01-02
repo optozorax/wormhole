@@ -99,5 +99,5 @@ class Main implements MainInterface {
 if (location.protocol === 'http:') {
   location.replace(location.href.replace('http:', 'https:'))
 } else {
-  this.main = new Main()
+  ;(window as any).app = new Main()
 }
