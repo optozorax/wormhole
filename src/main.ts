@@ -14,7 +14,7 @@ class Main implements MainInterface {
   allControls: Record<ControlScheme, PlayerControls>
   currentControls?: PlayerControls
 
-  wormholeSpace = new WormholeSpace(1.5, 0.5)
+  wormholeSpace = new WormholeSpace(1.5, 0.1)
   player: Player
   renderer: Renderer
   ui: UiManager
@@ -99,5 +99,5 @@ class Main implements MainInterface {
 if (location.protocol === 'http:') {
   location.replace(location.href.replace('http:', 'https:'))
 } else {
-  new Main()
+  this.main = new Main()
 }
