@@ -20,7 +20,7 @@ void step2D(inout vec2 position, inout vec2 direction, inout float throatTravelD
 
   if (distanceToWormhole >= 0.0) {
     // We can take bigger integration steps when at a larger distance away from the wormhole.
-    delta = (0.01 + 0.002 * distanceToWormhole) / uRadiusSquared;
+    delta = (0.1 + 0.02 * distanceToWormhole) / uRadiusSquared;
 
     // Use backwards euler integration
     float h = delta,
@@ -72,7 +72,7 @@ void normalizeDirection2D(vec2 position, inout vec2 direction) {
 
 // Integrate in 2D wormhole space.
 void integrate2D(inout vec2 position, inout vec2 direction, inout float throatTravelDistance) {
-  for (int i = 0; i < 2000; i++) {
+  for (int i = 0; i < 200; i++) {
     step2D(position, direction, throatTravelDistance);
     // normalizeDirection2D(ray);
   }
